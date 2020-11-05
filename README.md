@@ -15,7 +15,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task One: Installation of ACM**
+## **Task One: Installation of ACM**
 
 **Task**: In this task you’re going to be asked to deploy Red Hat ACM on an existing OpenShift cluster (must be at least OpenShift 4.3). ACM is deployed as an operator, and therefore you’ll deploy the components using the OpenShift OperatorHub, just like any other operator.
 
@@ -27,7 +27,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Two: Import an Existing Cluster**
+## **Task Two: Import an Existing Cluster**
 
 **Task**: In this task you’re going to be asked to import an existing OpenShift cluster using Red Hat ACM. The cluster can be of any type environment: AWS, GCP, Azure, IBM, Vmware or Baremetal (physical). You should be able to import via either the OpenShift Console and/or the OpenShift CLI.
 
@@ -37,7 +37,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Three: Deploy a New Cluster**
+## **Task Three: Deploy a New Cluster**
 
 **Task**: In this task you will be creating a new OpenShift cluster with ACM. This will require you to create first a provider connection and then complete the create a cluster portion using the provider connection configured. Deployment of any supported cluster type can be used.
 
@@ -49,7 +49,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Four: Launch OCP Console from ACM**
+## **Task Four: Launch OCP Console from ACM**
 
 **Task**: In this task after you have completed either installing or importing a OpenShift cluster via ACM you should be able to launch the OpenShift clusters Console UI via Automate Infrastructures -> Clusters.
 
@@ -59,7 +59,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Five: Upgrade an OCP Cluster**
+## **Task Five: Upgrade an OCP Cluster**
 
 **Task**: In this task you can use ACM Console to upgrade those clusters to the latest minor version that is available in the version channel that the managed cluster uses.
 
@@ -71,7 +71,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Six: Deploy Application Resources & Create a Placement Rule**
+## **Task Six: Deploy Application Resources & Create a Placement Rule**
 
 **Task**: In this task we will deploy an application with a subscription, channel and placement rule. We will use the Create Application action in the ACM Console UI to create the application using the dev app yaml provided below.
 
@@ -83,7 +83,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Seven: Modify a Placement Rule**
+## **Task Seven: Modify a Placement Rule**
 
 **Task**: Ensure you have at least one cluster with a specific label (such as “dev”, “prod”, “test”, etc). Modify an Application’s “PlacementRule” section to use a specific cluster by updating or creating the **matchLabels** directive. Review the application Topology and see that there is now a placement to the new clusterObserve the app placement from the OCP cluster itself. View it side-by-side with your ACM console and have the pods view open with the project selected.
 
@@ -93,7 +93,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Eight: Update Application Version**
+## **Task Eight: Update Application Version**
 
 **Task**: Update an application from a current version to a newer version. Update the packageFilter setting for your application (ie change the version label to a newer release).
 
@@ -103,7 +103,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Nine: Deploy an application to multiple clusters at once**
+## **Task Nine: Deploy an application to multiple clusters at once**
 
 **Task**: Deploy an application to multiple clusters at once to ensure availability across regions/infrastructure. Examples of how to do this can be found at https://github.com/open-cluster-management/demo-subscription-gitops.git
 
@@ -113,7 +113,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Ten: Security Policy Creation and Automated Remediation**
+## **Task Ten: Security Policy Creation and Automated Remediation**
 
 **Task**: Create a security policy that checks for a specific resource and inform on its presence. Create a remediation policy to take action when a violation is detected and correct/mitigate it.
 
@@ -129,7 +129,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Eleven: General Observability**
+## **Task Eleven: General Observability**
 
 **Task**: In this task after deploying and/or importing a OpenShift cluster, interact with the key observability areas of the ACM Console UI: Overview, Search, Virtual Web Terminal and Topology views
 
@@ -139,7 +139,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 
 
-### **Task Twelve: Global Query view with Grafana**
+## **Task Twelve: Global Query view with Grafana**
 
 **Task**: Review the new out of the box multi cluster health monitoring dashboards. Create custom queries using PromQL (Prometheus Query Language).
 
@@ -147,7 +147,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: Useful queries can be easily built. We are curious to see what queries you build and how you use them. And also other ways you’d like to be able to access this data. Please share your findings with us.
 
-### **Next Steps: Comprehensive Scenario-Driven Labs**
+## **Next Steps: Comprehensive Scenario-Driven Labs**
 
 **Task**: We have comprehensive publicly available labs that help you to really understand RHACM. Once you’ve completed the basic task lists for the High Touch Beta it’s worth delving into some of these labs to try some new things on your clusters (or even try some deployments to infra you may not use normally!). We are eager to see how customers use RHACM and these labs represent a solid cross section of tasks we see as foundational. But we need your feedback! Do they work? Can they be improved? Minimally, try applying the concepts in each lab on your own deployments and record your feedback for review by our Product Management and Engineering teams! This is your chance to share directly with the teams that shape *and create* the product! Have your say!
 
@@ -156,3 +156,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 **Documentation**: https://github.com/open-cluster-management/labs
 
 **Success Criteria**: Complete the labs to learn the basic steps and concepts for core RHACM tasks. But we don’t just want you to finish them, we want to know where there are gaps for your company workflows. How can these processes be improved? Take lots of notes and let’s sit down with Product Management and Engineering to share your experiences!Bonus Success: contribute to the labs with improvements and more content!
+
+
+
+# End
