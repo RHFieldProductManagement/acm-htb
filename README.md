@@ -154,14 +154,39 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 ## **Next Steps: Comprehensive Scenario-Driven Labs**
 
-**Task**: We have comprehensive publicly available labs that help you to really understand RHACM. Once you’ve completed the basic task lists for the High Touch Beta it’s worth delving into some of these labs to try some new things on your clusters (or even try some deployments to infra you may not use normally!). We are eager to see how customers use RHACM and these labs represent a solid cross section of tasks we see as foundational. But we need your feedback! Do they work? Can they be improved? Minimally, try applying the concepts in each lab on your own deployments and record your feedback for review by our Product Management and Engineering teams! This is your chance to share directly with the teams that shape *and create* the product! Have your say!
+We have **three comprehensive, publicly available labs** that help you to really understand RHACM. Once you’ve completed the basic task lists for the High Touch Beta it’s worth delving into some of these labs to try some new things on your clusters (or even try some deployments to infra you may not use normally!). We are eager to see how customers use RHACM and these labs represent a solid cross section of tasks we see as foundational. But we need your feedback! Do they work? Can they be improved? Minimally, try applying the concepts in each lab on your own deployments and record your feedback for review by our Product Management and Engineering teams! This is your chance to share directly with the teams that shape *and create* the product! Have your say!
 
-**MultiCloud Cluster Deployments with ACM**: In this series of labs you’ll install an ACM Hub on AWS and then provision managed clusters on AWS, Azure, and GCP. You’ll get to deploy a sample app and explore load balancing across the clusters. Bonus: why extend the concepts of the lab by adding vmware or physical OCP clusters in your datacentre! We’d like to see how these new deployment features work in our customer’s environments.Introduction to GitOps and Policies with ACM: Continue the policy task by diving deep into the world of governance and control! You’ll deploy policies to multiple clusters and cover important topics like DR and infra as code. Application Portability: Use GitOps to deploy a complex application across multiple clusters. This lab provides a “textbook” deployment scenario. Run through it and see how it would apply to your own applications? Are there gaps? What can be improved in the product to make it work better for you!?
+### MultiCloud Cluster Deployments with ACM: 
 
-**Documentation**: https://github.com/open-cluster-management/labs
+This lab takes you through installing an ACM Hub on AWS and then provisioning managed clusters on AWS, Azure, and GCP. You’ll get to deploy a sample app and explore load balancing across the clusters. 
 
-**Success Criteria**: Complete the labs to learn the basic steps and concepts for core RHACM tasks. But we don’t just want you to finish them, we want to know where there are gaps for your company workflows. How can these processes be improved? Take lots of notes and let’s sit down with Product Management and Engineering to share your experiences!Bonus Success: contribute to the labs with improvements and more content!
+*While this labs are a complete deployment experience, why not extend the concepts of the lab by adding on-premises clusters, such as VMware, RHV, or physical OCP clusters!*
+
+We’d like to see how these new deployment features work in your customer environments. 
+
+[ACM Infrastructure lab](https://github.com/open-cluster-management/labs/blob/master/multicloud-deployment/README.md)
+
+### Introduction to GitOps and Policies with ACM: 
+
+Continue the policy tasks you did above by diving deep into the world of governance and control! You’ll deploy policies to multiple clusters and cover important topics like DR and infra as code. 
+
+[Introduction to GitOps and Policies with ACM](https://github.com/open-cluster-management/labs/blob/master/introduction-to-gitops-and-policies/README.md)
+
+### Application Portability: 
+
+Use GitOps to deploy a complex application across multiple clusters. This lab provides a “textbook” deployment scenario. Run through it and see how it would apply to your own applications. *Are there gaps? What can be improved in the product to make it work better for you!?*
+
+[Hands on with Red Hat Advanced Cluster Management](https://github.com/open-cluster-management/labs/blob/master/application-portability/README.md)
 
 
+## What's Next?
+
+Hopefully these tasks helped to re-enforce the basic procedures and concepts behind the core RHACM tasks. 
+
+**But we don’t just want you to just finish them, we want you to apply them to your own infra!** Share where there are gaps for your company workflows. How can these processes be improved? Take lots of notes and let’s sit down with Product Management and Engineering to share your experiences! 
+
+And let's extend things even more. If you have improvements to the labs and shared code send a pull request! By helping us improve these documents you are also helping our field to better understand how you, **our customers**, use our products.
+
+And you're not alone. **Work closely with your Field PM for all tasks, code, and processes.** They will connect you to Engineering, Product Management, and anyone else within Red Hat who can help with your RHACM journey!
 
 # End
