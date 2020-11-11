@@ -139,7 +139,21 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: In this task after deploying and/or importing a OpenShift cluster, interact with the key observability areas of the ACM Console UI: Overview, Search, Virtual Web Terminal and Topology views
 
-**Documentation**: [Web console overview and usage](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/web_console/web-console)
+**Documentation**: 
+
+* [Oberving Environments (overview)](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/observing_environments/observing-environments)
+
+* [Web console overview and usage](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/web_console/web-console)
+
+* A couple of steps about [Using Visual Web Terminal](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-visual-web-terminal) 
+
+**Installation**
+
+You need enable the obersvability service to be able to do many of the non-search tasks. Go to [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/observing_environments/observing-environments#enable-observability) and follow the steps before proceeding.
+
+> **NOTE:** As a prerequisite to enabling obersvability you must first configure an object store to create a storage solution. Red Hat Advanced Cluster Management only supports cloud providers with stable object stores, such as Amazon S3 (or other S3 compatible object stores like Ceph), Google Cloud Storage, and Azure storage.
+
+**Search Exercises**: Get familiar with search easily following the Search section at [Explore using ACM Observability](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-search)
 
 **Success Criteria**: You are able to view and easily find the Clusters, Applications, and Topology views and observe that they accurately and clearly reflect the state of your cluster(s). You are able to use the search feature to find resources across all managed clusters including the use of filters to “drill down” to very specific information sets.You are able to save complex search queries for reuseYou have been able to explore the Visual Web Terminal to run basic OC commands on both your hub and managed clusters in the same way as from a standard CLI
 
@@ -148,9 +162,17 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: Review the new out of the box multi cluster health monitoring dashboards. Create custom queries using PromQL (Prometheus Query Language).
 
-**Documentation**: [PromQL Cheat sheet (not Red Hat supported)](https://promlabs.com/promql-cheat-sheet/)
+Remember to enable Observability as per [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/observing_environments/observing-environments#enable-observability)
 
-**Success Criteria**: Useful queries can be easily built. We are curious to see what queries you build and how you use them. And also other ways you’d like to be able to access this data. Please share your findings with us.
+**Documentation**: 
+
+* Learn to use Grafana in ACM 2.1 by following some simple steps from [Using Grafana Explore](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-grafana-explore)
+
+* [PromQL Cheat sheet (not Red Hat supported)](https://promlabs.com/promql-cheat-sheet/)
+
+**Success Criteria**: Useful queries can be easily built! Grafna data can be harnessed!
+
+We are curious to see what queries you build and how you use them. Also please let us other ways you’d like to be able to access this data. What works for you? What does not? Please share your findings with us. :)
 
 ## **Next Steps: Comprehensive Scenario-Driven Labs**
 
