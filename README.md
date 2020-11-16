@@ -1,6 +1,6 @@
-# **ACM High Touch Beta Test Plan**
+# **Red Hat Advanced Cluster Management for Kubernetes High Touch Beta Test Plan**
 
-Many thanks for your participation in the ACM High Touch Beta - we realise that your time is valuable and we very much appreciate the assistance in making our ACM product better. The purpose of this document is to provide guidance for participation in the ACM high touch beta programme, it details the main objectives that we ask our customers to complete, along with links to documentation, examples where required, how to get assistance, and how our HTB customers can provide feedback.
+Many thanks for your participation in the Red Hat Advanced Cluster Management for Kubernetes (RHACM) High Touch Beta - we realise that your time is valuable and we very much appreciate the assistance in making our RHACM product better. The purpose of this document is to provide guidance for participation in the RHACM High Touch Beta programme, it details the main objectives that we ask our customers to complete, along with links to documentation, examples where required, how to get assistance, and how our HTB customers can provide feedback.
 
 To be clear, the purpose of the HTB is to facilitate access to early-release software with key customers that meet the inclusion criteria that we’ve set. Customers that are included within the programme are doing so on a mutually beneficial basis, more specifically-
 
@@ -12,62 +12,62 @@ Below you’ll find a broken out set of major objectives that we’re asking all
 
 Additionally each task has a short "Post-task questionnaire" to facilitate additional feedback for us to collaborate on. Please fill them out as you complete the tasks and feel free to ask questions as required. 
 
-Furthermore, by establishing this relationship, the Field Product Manager can coordinate additional resources from across the organisation to join the sync calls if/when required, e.g. engineering, product management, or executive sponsors.
+Furthermore, by establishing this relationship, the Field Product Manager can coordinate additional resources from across the organisation to RHACMjoin the sync calls if/when required, e.g. engineering, product management, or executive sponsors.
 For each of the tasks below, please report your suggestions, feedback, and any bugs/RFE’s to your assigned Field Product Manager in your weekly cadence calls, or via the chat.
 
 
 
-## **Task One: Installation of ACM**
+## **Task One: Installation of RHACM**
 
-**Task**: In this task you’re going to be asked to deploy Red Hat ACM on an existing OpenShift cluster (must be at least OpenShift 4.3). ACM is deployed as an operator, and therefore you’ll deploy the components using the OpenShift OperatorHub, just like any other operator.
+**Task**: In this task you’re going to be asked to deploy RHACM on an existing OpenShift cluster (must be at least OpenShift 4.3). RHACM is deployed as an operator, and therefore you’ll deploy the components using the OpenShift OperatorHub, just like any other operator.
 
 **Documentation**: [Installing instructions for Red Hat Advanced Cluster Management for Kubernetes](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html-single/install/index)
 
 **Installation Video**: https://youtu.be/4keQWJoFl7A
 
-**Success Criteria**: ACM is fully installed, all pods are running, and you can log into the ACM UI (via the exposed service route). Note, when checking the status of the multicluster-hub operator, be sure to select the 'open-cluster-management' project, or you won’t find the operator listed as it’s a “scoped” resource.
+**Success Criteria**: RHACM is fully installed, all pods are running, and you can log into the RHACM UI (via the exposed service route). Note, when checking the status of the multicluster-hub operator, be sure to select the 'open-cluster-management' project, or you won’t find the operator listed as it’s a “scoped” resource.
 
 **Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_br0R8NbFjVdVm61) about what the experience was like.
 
 ## **Task Two: Import an Existing Cluster**
 
-**Task**: In this task you’re going to be asked to import an existing OpenShift cluster using Red Hat ACM. The cluster can be of any type environment: AWS, GCP, Azure, IBM, Vmware or Baremetal (physical). You should be able to import via either the OpenShift Console and/or the OpenShift CLI.
+**Task**: In this task you’re going to be asked to import an existing OpenShift cluster using RHACM. The cluster can be of any type environment: AWS, GCP, Azure, IBM, Vmware or Baremetal (physical). You should be able to import via either the OpenShift Console and/or the OpenShift CLI.
 
 **Documentation**: [Importing a target managed cluster to the hub cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/importing-a-target-managed-cluster-to-the-hub-cluster)
 
-**Success Criteria**: Once completed with this task the OpenShift cluster should be visible in the ACM UI under the location of Automate Infrastructure -> Clusters. Details about the cluster should also be visible.
+**Success Criteria**: Once completed with this task the OpenShift cluster should be visible in the RHACM UI under the location of Automate Infrastructure -> Clusters. Details about the cluster should also be visible.
 
 **Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_6EV256twH2ym8AJ) about what the experience was like.
 
 ## **Task Three: Deploy a New Cluster**
 
-**Task**: In this task you will be creating a new OpenShift cluster with ACM. This will require you to create first a provider connection and then complete the create a cluster portion using the provider connection configured. Deployment of any supported cluster type can be used.
+**Task**: In this task you will be creating a new OpenShift cluster with RHACM. This will require you to create first a provider connection and then complete the create a cluster portion using the provider connection configured. Deployment of any supported cluster type can be used.
 
 **Documentation (Provider Connection)**: [Creating a provider connection](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/creating-a-provider-connection) 
 
 **Documentation (Create Cluster)**: [Creating a cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/creating-a-cluster) 
 
-**Success Criteria**: Upon successful completion of task ACM should have deployed a OpenShift cluster on the provider type chosen. Running a few oc commands on the newly deployed cluster can validate it is up and operational: oc get nodes, oc get co
+**Success Criteria**: Upon successful completion of task RHACM should have deployed a OpenShift cluster on the provider type chosen. Running a few oc commands on the newly deployed cluster can validate it is up and operational: oc get nodes, oc get co
 
 **Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_exHZ9NxvRUiDb0x) about what the experience was like.
 
-## **Task Four: Launch OCP Console from ACM**
+## **Task Four: Launch OCP Console from RHACM**
 
-**Task**: In this task after you have completed either installing or importing a OpenShift cluster via ACM you should be able to launch the OpenShift clusters Console UI via Automate Infrastructures -> Clusters.
+**Task**: In this task after you have completed either installing or importing a OpenShift cluster via RHACM you should be able to launch the OpenShift clusters Console UI via Automate Infrastructures -> Clusters.
 
 **Documentation**: [Observability in the console](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/web_console/web-console#observability-in-the-console)
 
-**Success Criteria**: Ability to launch the OpenShift Console from ACM and successfully login and view details of the cluster.
+**Success Criteria**: Ability to launch the OpenShift Console from RHACM and successfully login and view details of the cluster.
 
 **Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_3BLyVBpZZFLlWBL) about what the experience was like.
 
 ## **Task Five: Upgrade an OCP Cluster**
 
-**Task**: In this task you can use ACM Console to upgrade those clusters to the latest minor version that is available in the version channel that the managed cluster uses.
+**Task**: In this task you can use RHACM Console to upgrade those clusters to the latest minor version that is available in the version channel that the managed cluster uses.
 
 **Documentation**: [Upgrading your cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/upgrading-your-cluster)
 
-**Success Criteria**: From the ACM Console under Automated Infrastructure -> Cluster one can select to upgrade cluster from one minor version to another. During the upgrade process one may see the upgrade cycling from failed/unknown/upgrading as it takes approximately 30-45 minutes depending on size and resources of the cluster. During the upgrade process one can also use the Launch to console action to view the upgrade experience. Cluster is upgraded from one minor to the selected target minor 
+**Success Criteria**: From the RHACM Console under Automated Infrastructure -> Cluster one can select to upgrade cluster from one minor version to another. During the upgrade process one may see the upgrade cycling from failed/unknown/upgrading as it takes approximately 30-45 minutes depending on size and resources of the cluster. During the upgrade process one can also use the Launch to console action to view the upgrade experience. Cluster is upgraded from one minor to the selected target minor 
 
 > **NOTE**: Upgrade the major version of a cluster using a [configuration policy.](https://github.com/open-cluster-management/policy-collection/blob/master/community/CM-Configuration-Management/policy-upgrade-openshift-cluster.yaml); more details on using configuration policies is in a later task.
 
@@ -75,7 +75,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 ## **Task Six: Deploy Application Resources & Create a Placement Rule**
 
-**Task**: In this task we will deploy an application with a subscription, channel and placement rule. We will use the Create Application action in the ACM Console UI to create the application using the dev app yaml provided below.
+**Task**: In this task we will deploy an application with a subscription, channel and placement rule. We will use the Create Application action in the RHACM Console UI to create the application using the dev app yaml provided below.
 
 **Documentation**: [Manage applications](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_applications/index)
 
@@ -87,7 +87,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 ## **Task Seven: Modify a Placement Rule**
 
-**Task**: Ensure you have at least one cluster with a specific label (such as “dev”, “prod”, “test”, etc). Modify an Application’s “PlacementRule” section to use a specific cluster by updating or creating the **matchLabels** directive. Review the application Topology and see that there is now a placement to the new clusterObserve the app placement from the OCP cluster itself. View it side-by-side with your ACM console and have the pods view open with the project selected.
+**Task**: Ensure you have at least one cluster with a specific label (such as “dev”, “prod”, “test”, etc). Modify an Application’s “PlacementRule” section to use a specific cluster by updating or creating the **matchLabels** directive. Review the application Topology and see that there is now a placement to the new clusterObserve the app placement from the OCP cluster itself. View it side-by-side with your RHACM console and have the pods view open with the project selected.
 
 **Documentation**: [Placement rules](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_applications/managing-applications#placement-rules)
 
@@ -139,7 +139,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 ## **Task Eleven: General Observability**
 
-**Task**: In this task after deploying and/or importing a OpenShift cluster, interact with the key observability areas of the ACM Console UI: Overview, Search, Virtual Web Terminal and Topology views
+**Task**: In this task after deploying and/or importing a OpenShift cluster, interact with the key observability areas of the RHACM Console UI: Overview, Search, Virtual Web Terminal and Topology views
 
 **Documentation**: 
 
@@ -155,7 +155,7 @@ You need enable the obersvability service to be able to do many of the non-searc
 
 > **NOTE:** As a prerequisite to enabling obersvability you must first configure an object store to create a storage solution. Red Hat Advanced Cluster Management only supports cloud providers with stable object stores, such as Amazon S3 (or other S3 compatible object stores like Ceph), Google Cloud Storage, and Azure storage.
 
-**Search Exercises**: Get familiar with search easily following the Search section at [Explore using ACM Observability](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-search)
+**Search Exercises**: Get familiar with search easily following the Search section at [Explore using RHACM Observability](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-search)
 
 **Success Criteria**: You are able to view and easily find the Clusters, Applications, and Topology views and observe that they accurately and clearly reflect the state of your cluster(s). You are able to use the search feature to find resources across all managed clusters including the use of filters to “drill down” to very specific information sets.You are able to save complex search queries for reuseYou have been able to explore the Visual Web Terminal to run basic OC commands on both your hub and managed clusters in the same way as from a standard CLI
 
@@ -169,7 +169,7 @@ Remember to enable Observability as per [Enable observability service](https://a
 
 **Documentation**: 
 
-* Learn to use Grafana in ACM 2.1 by following some simple steps from [Using Grafana Explore](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-grafana-explore)
+* Learn to use Grafana in RHACM 2.1 by following some simple steps from [Using Grafana Explore](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-grafana-explore)
 
 * [PromQL Cheat sheet (not Red Hat supported)](https://promlabs.com/promql-cheat-sheet/)
 
@@ -183,9 +183,9 @@ We are curious to see what queries you build and how you use them. Also please l
 
 We have **three comprehensive, publicly available labs** that help you to really understand RHACM. Once you’ve completed the basic task lists for the High Touch Beta it’s worth delving into some of these labs to try some new things on your clusters (or even try some deployments to infra you may not use normally!). We are eager to see how customers use RHACM and these labs represent a solid cross section of tasks we see as foundational. But we need your feedback! Do they work? Can they be improved? Minimally, try applying the concepts in each lab on your own deployments and record your feedback for review by our Product Management and Engineering teams! This is your chance to share directly with the teams that shape *and create* the product! Have your say!
 
-### MultiCloud Cluster Deployments with ACM: 
+### MultiCloud Cluster Deployments with RHACM: 
 
-This lab takes you through installing an ACM Hub on AWS and then provisioning managed clusters on AWS, Azure, and GCP. You’ll get to deploy a sample app and explore load balancing across the clusters. 
+This lab takes you through installing an RHACM Hub on AWS and then provisioning managed clusters on AWS, Azure, and GCP. You’ll get to deploy a sample app and explore load balancing across the clusters. 
 
 *While this labs are a complete deployment experience, why not extend the concepts of the lab by adding on-premises clusters, such as VMware, RHV, or physical OCP clusters!*
 
@@ -193,7 +193,7 @@ We’d like to see how these new deployment features work in your customer envir
 
 [ACM Infrastructure lab](https://github.com/open-cluster-management/labs/blob/master/multicloud-deployment/README.md)
 
-### Introduction to GitOps and Policies with ACM: 
+### Introduction to GitOps and Policies with RHACM: 
 
 Continue the policy tasks you did above by diving deep into the world of governance and control! You’ll deploy policies to multiple clusters and cover important topics like DR and infra as code. 
 
