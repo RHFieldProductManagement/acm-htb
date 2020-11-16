@@ -10,6 +10,8 @@ To be clear, the purpose of the HTB is to facilitate access to early-release sof
 
 Below you’ll find a broken out set of major objectives that we’re asking all participants to complete over the next few weeks/months. We’ll be assigning a point of contact (a Field Product Manager) and setting up mechanisms for communication, both for receiving assistance, but also to create a conduit for feedback to flow back into our product teams. We’ll be looking to set up a regular cadence call but also a chat channel for quicker and on-demand communication.
 
+Additionally each task has a short "Post-task questionnaire" to facilitate additional feedback for us to collaborate on. Please fill them out as you complete the tasks and feel free to ask questions as required. 
+
 Furthermore, by establishing this relationship, the Field Product Manager can coordinate additional resources from across the organisation to join the sync calls if/when required, e.g. engineering, product management, or executive sponsors.
 For each of the tasks below, please report your suggestions, feedback, and any bugs/RFE’s to your assigned Field Product Manager in your weekly cadence calls, or via the chat.
 
@@ -25,7 +27,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: ACM is fully installed, all pods are running, and you can log into the ACM UI (via the exposed service route). Note, when checking the status of the multicluster-hub operator, be sure to select the 'open-cluster-management' project, or you won’t find the operator listed as it’s a “scoped” resource.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_br0R8NbFjVdVm61) about what the experience was like.
 
 ## **Task Two: Import an Existing Cluster**
 
@@ -35,7 +37,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: Once completed with this task the OpenShift cluster should be visible in the ACM UI under the location of Automate Infrastructure -> Clusters. Details about the cluster should also be visible.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_6EV256twH2ym8AJ) about what the experience was like.
 
 ## **Task Three: Deploy a New Cluster**
 
@@ -47,7 +49,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: Upon successful completion of task ACM should have deployed a OpenShift cluster on the provider type chosen. Running a few oc commands on the newly deployed cluster can validate it is up and operational: oc get nodes, oc get co
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_exHZ9NxvRUiDb0x) about what the experience was like.
 
 ## **Task Four: Launch OCP Console from ACM**
 
@@ -57,7 +59,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: Ability to launch the OpenShift Console from ACM and successfully login and view details of the cluster.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_3BLyVBpZZFLlWBL) about what the experience was like.
 
 ## **Task Five: Upgrade an OCP Cluster**
 
@@ -69,7 +71,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 > **NOTE**: Upgrade the major version of a cluster using a [configuration policy.](https://github.com/open-cluster-management/policy-collection/blob/master/community/CM-Configuration-Management/policy-upgrade-openshift-cluster.yaml); more details on using configuration policies is in a later task.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_cNlcY8Bcp5YoODr) about what the experience was like.
 
 ## **Task Six: Deploy Application Resources & Create a Placement Rule**
 
@@ -81,7 +83,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: Success of this task is based on the ability to create an application action and verify the app shows in the table. Further we should be able to validate that the channel was created and shows up in the pipeline.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_5u2Th9YxF2jDgtT) about what the experience was like.
 
 ## **Task Seven: Modify a Placement Rule**
 
@@ -91,7 +93,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: The application is moved to the cluster with the label specified.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_8zRmTjN8rQiHgvH) about what the experience was like.
 
 ## **Task Eight: Update Application Version**
 
@@ -101,7 +103,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: The application is updated to the newer version.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_0HEz2amkNV6zXQ9) about what the experience was like.
 
 ## **Task Nine: Deploy an application to multiple clusters at once**
 
@@ -111,7 +113,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: The application is successfully deployed to multiple clusters and/or providers.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_eET45F6TmE6kv77) about what the experience was like.
 
 ## **Task Ten: Security Policy Creation and Automated Remediation**
 
@@ -133,7 +135,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Success Criteria**: A policy alerts when criteria are matched but no action is taken. Additionally the violation is clearly and comprehensively reported and reviewable via the UX and CLI and/or reporting mechanisms.A policy is triggered and the result is automated remediation without any additional action. Additionally the violation and remediation are clearly and comprehensively reported and reviewable via the UX and CLI and/or reporting mechanisms.
 
-
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_cTukO35cmisBi7z) about what the experience was like.
 
 ## **Task Eleven: General Observability**
 
@@ -157,6 +159,7 @@ You need enable the obersvability service to be able to do many of the non-searc
 
 **Success Criteria**: You are able to view and easily find the Clusters, Applications, and Topology views and observe that they accurately and clearly reflect the state of your cluster(s). You are able to use the search feature to find resources across all managed clusters including the use of filters to “drill down” to very specific information sets.You are able to save complex search queries for reuseYou have been able to explore the Visual Web Terminal to run basic OC commands on both your hub and managed clusters in the same way as from a standard CLI
 
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_9ulTorCEUiFgBY9) about what the experience was like.
 
 ## **Task Twelve: Global Query view with Grafana**
 
@@ -173,6 +176,8 @@ Remember to enable Observability as per [Enable observability service](https://a
 **Success Criteria**: Useful queries can be easily built! Grafna data can be harnessed!
 
 We are curious to see what queries you build and how you use them. Also please let us other ways you’d like to be able to access this data. What works for you? What does not? Please share your findings with us. :)
+
+**Post-task questionnaire**:  After you have completed this task, please take a few moments to [share your thoughts](https://redhatdg.co1.qualtrics.com/jfe/form/SV_087EeWbim8sLTGB) about what the experience was like.
 
 ## **Next Steps: Comprehensive Scenario-Driven Labs**
 
