@@ -4,6 +4,8 @@ The following a collection of common questions and answers related to the Red Ha
 
 ## **Overview Questions**
 
+*Q)
+
 ## **Observability Questions**
 
 ## **Cluster Lifecycle Questions**
@@ -12,4 +14,4 @@ The following a collection of common questions and answers related to the Red Ha
 
 ## **Governance, Risk & Compliance Questions**
 
-## **Miscelaneous Questions**
+## **Miscellaneous Questions**
