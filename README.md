@@ -18,7 +18,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 ## **Pre Task: Obtain Pre-Release RHACM Software**
 
-**Task**:  Obtain the pre-release version of the RHACM software (Note: This is optional and a GA release can be used however using pre-release provides access to new features and functionality)
+**Task**:  Obtain the pre-release version of the RHACM software (Note: This is optional and a GA release can be used however using pre-release provides access to new features and functionality).
 
 **Documentation**: [RHACM Pre-Release Software Installation Instructions](https://github.com/RHFieldProductManagement/acm-htb/blob/master/rhacm-prerelease.md)
 
