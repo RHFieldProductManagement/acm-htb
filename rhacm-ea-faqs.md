@@ -17,5 +17,5 @@ The following a collection of common questions and answers related to the Red Ha
 
 ## **Miscellaneous Questions**
 
-* Question: When can I expect to see RHACM cirriculum in the Red Hat Learning Portal?
+* Question: When can I expect to see RHACM curriculum in the Red Hat Learning Portal?
   - Answer: RHACM are tenatively scheduled to be in the Red Hat Learning Portal the second half of 2021. 
