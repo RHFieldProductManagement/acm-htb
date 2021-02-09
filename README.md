@@ -1,8 +1,8 @@
-# **Red Hat Advanced Cluster Management for Kubernetes High Touch Beta Test Plan**
+# **Red Hat Advanced Cluster Management Early Access Test Plan**
 
-Many thanks for your participation in the Red Hat Advanced Cluster Management for Kubernetes (RHACM) High Touch Beta - we realise that your time is valuable and we very much appreciate the assistance in making our RHACM product better. The purpose of this document is to provide guidance for participation in the RHACM High Touch Beta programme, it details the main objectives that we ask our customers to complete, along with links to documentation, examples where required, how to get assistance, and how our HTB customers can provide feedback.
+Many thanks for your participation in the Red Hat Advanced Cluster Management (RHACM) Early Access Program - we realize that your time is valuable and we very much appreciate the assistance in making our RHACM product better. The purpose of this document is to provide guidance for participation in the RHACM Early Access Program, it details the main objectives that we ask our customers to complete, along with links to documentation, examples where required, how to get assistance, and how our early access customers can provide feedback.
 
-To be clear, the purpose of the HTB is to facilitate access to early-release software with key customers that meet the inclusion criteria that we’ve set. Customers that are included within the programme are doing so on a mutually beneficial basis, more specifically-
+To be clear, the purpose of the Early Access Program is to facilitate access to early-release software with key customers that meet the inclusion criteria that we’ve set. Customers that are included within the programme are doing so on a mutually beneficial basis, more specifically-
 
 1. We’re getting some soak-time for the product within our customer base - customers can test it as a pre-release/beta/early offering with no production support, where it’s somewhat expected that certain features may not be fully developed. It’s one thing for us to test our software internally, with our test workloads, and with our expectations, but it’s another for our customers to test it within their datacentres, with their workloads, with their restrictions, and with their expectations.
 2. We’re giving select customers the opportunity to weigh into the product prioritisation - they’ll be testing the software before anyone else; their bugs, RFE’s, suggestions, and feedback will help set expectations and prioritisation of our engineering efforts for the coming releases. In other words, the product (somewhat) gets built to suit their desires.
@@ -12,10 +12,15 @@ Below you’ll find a broken out set of major objectives that we’re asking all
 
 Additionally each task has a short "Post-task questionnaire" to facilitate additional feedback for us to collaborate on. Please fill them out as you complete the tasks and feel free to ask questions as required. 
 
-Furthermore, by establishing this relationship, the Field Product Manager can coordinate additional resources from across the organisation to RHACMjoin the sync calls if/when required, e.g. engineering, product management, or executive sponsors.
+Furthermore, by establishing this relationship, the Field Product Manager can coordinate additional resources from across the RHACM organization to join the sync calls if/when required, e.g. engineering, product management, or executive sponsors.
+
 For each of the tasks below, please report your suggestions, feedback, and any bugs/RFE’s to your assigned Field Product Manager in your weekly cadence calls, or via the chat.
 
+## **Pre Task: Obtain Pre-Release RHACM Software**
 
+**Task**:  Obtain the pre-release version of the RHACM software
+
+**Documentation**: [RHACM Pre-Release Software Installation Instructions](https://github.com/RHFieldProductManagement/acm-htb/blob/master/rhacm-prerelease.md)
 
 ## **Task One: Installation of RHACM**
 
