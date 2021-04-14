@@ -38,7 +38,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: In this task you’re going to be asked to import an existing OpenShift cluster using RHACM. The cluster can be of any type environment: AWS, GCP, Azure, IBM, Vmware or Baremetal (physical). You should be able to import via either the OpenShift Console and/or the OpenShift CLI.
 
-**Documentation**: [Importing a target managed cluster to the hub cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/importing-a-target-managed-cluster-to-the-hub-cluster)
+**Documentation**: [Importing a target managed cluster to the hub cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_cluster/importing-a-target-managed-cluster-to-the-hub-cluster)
 
 **Success Criteria**: Once completed with this task the OpenShift cluster should be visible in the RHACM UI under the location of Automate Infrastructure -> Clusters. Details about the cluster should also be visible.
 
@@ -48,9 +48,9 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: In this task you will be creating a new OpenShift cluster with RHACM. This will require you to create first a provider connection and then complete the create a cluster portion using the provider connection configured. Deployment of any supported cluster type can be used.
 
-**Documentation (Provider Connection)**: [Creating a provider connection](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/creating-a-provider-connection) 
+**Documentation (Provider Connection)**: [Creating a provider connection](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_cluster/creating-a-provider-connection) 
 
-**Documentation (Create Cluster)**: [Creating a cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/creating-a-cluster) 
+**Documentation (Create Cluster)**: [Creating a cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_cluster/creating-a-cluster) 
 
 **Success Criteria**: Upon successful completion of task RHACM should have deployed a OpenShift cluster on the provider type chosen. Running a few oc commands on the newly deployed cluster can validate it is up and operational: oc get nodes, oc get co
 
@@ -60,7 +60,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: In this task after you have completed either installing or importing a OpenShift cluster via RHACM you should be able to launch the OpenShift clusters Console UI via Automate Infrastructures -> Clusters.
 
-**Documentation**: [Observability in the console](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/web_console/web-console#observability-in-the-console)
+**Documentation**: [Observability in the console](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/web_console/web-console#observability-in-the-console)
 
 **Success Criteria**: Ability to launch the OpenShift Console from RHACM and successfully login and view details of the cluster.
 
@@ -70,7 +70,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: In this task you can use RHACM Console to upgrade those clusters to the latest minor version that is available in the version channel that the managed cluster uses.
 
-**Documentation**: [Upgrading your cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_cluster/upgrading-your-cluster)
+**Documentation**: [Upgrading your cluster](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_cluster/upgrading-your-cluster)
 
 **Success Criteria**: From the RHACM Console under Automated Infrastructure -> Cluster one can select to upgrade cluster from one minor version to another. During the upgrade process one may see the upgrade cycling from failed/unknown/upgrading as it takes approximately 30-45 minutes depending on size and resources of the cluster. During the upgrade process one can also use the Launch to console action to view the upgrade experience. Cluster is upgraded from one minor to the selected target minor 
 
@@ -82,7 +82,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: In this task we will deploy an application with a subscription, channel and placement rule. We will use the Create Application action in the RHACM Console UI to create the application using the dev app yaml provided below.
 
-**Documentation**: [Manage applications](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_applications/index)
+**Documentation**: [Manage applications](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_applications/index)
 
 **Sample Application Yaml**: [Sample application code](https://github.com/open-cluster-management/deploy/blob/master/demo/app/devapp/devapp.yaml) 
 
@@ -94,7 +94,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: Ensure you have at least one cluster with a specific label (such as “dev”, “prod”, “test”, etc). Modify an Application’s “PlacementRule” section to use a specific cluster by updating or creating the **matchLabels** directive. Review the application Topology and see that there is now a placement to the new clusterObserve the app placement from the OCP cluster itself. View it side-by-side with your RHACM console and have the pods view open with the project selected.
 
-**Documentation**: [Placement rules](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_applications/managing-applications#placement-rules)
+**Documentation**: [Placement rules](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_applications/managing-applications#placement-rules)
 
 **Success Criteria**: The application is moved to the cluster with the label specified.
 
@@ -104,7 +104,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: Update an application from a current version to a newer version. Update the packageFilter setting for your application (ie change the version label to a newer release).
 
-**Documentation**: [Update application](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.0/html/manage_applications/managing-applications#application)
+**Documentation**: [Update application](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_applications/managing-applications#application)
 
 **Success Criteria**: The application is updated to the newer version.
 
@@ -130,7 +130,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 * [Manage Security policies](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/security/security#manage-security-policies)
 
-**Overview**: https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/manage_applications/managing-applications
+**Overview**: https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_applications/managing-applications
 
 **Policies**: 
 
@@ -148,15 +148,15 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Documentation**: 
 
-* [Oberving Environments (overview)](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/observing_environments/observing-environments)
+* [Oberving Environments (overview)](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments/observing-environments)
 
-* [Web console overview and usage](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/web_console/web-console)
+* [Web console overview and usage](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/web_console/web-console)
 
 * A couple of steps about [Using Visual Web Terminal](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-visual-web-terminal) 
 
 **Installation**
 
-You need enable the obersvability service to be able to do many of the non-search tasks. Go to [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/observing_environments/observing-environments#enable-observability) and follow the steps before proceeding.
+You need enable the obersvability service to be able to do many of the non-search tasks. Go to [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments/observing-environments#enable-observability) and follow the steps before proceeding.
 
 > **NOTE:** As a prerequisite to enabling obersvability you must first configure an object store to create a storage solution. Red Hat Advanced Cluster Management only supports cloud providers with stable object stores, such as Amazon S3 (or other S3 compatible object stores like Ceph), Google Cloud Storage, and Azure storage.
 
@@ -170,11 +170,11 @@ You need enable the obersvability service to be able to do many of the non-searc
 
 **Task**: Review the new out of the box multi cluster health monitoring dashboards. Create custom queries using PromQL (Prometheus Query Language).
 
-Remember to enable Observability as per [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/observing_environments/observing-environments#enable-observability)
+Remember to enable Observability as per [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments/observing-environments#enable-observability)
 
 **Documentation**: 
 
-* Learn to use Grafana in RHACM 2.1 by following some simple steps from [Using Grafana Explore](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-grafana-explore)
+* Learn to use Grafana in RHACM 2.2 by following some simple steps from [Using Grafana Explore](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-grafana-explore)
 
 * [PromQL Cheat sheet (not Red Hat supported)](https://promlabs.com/promql-cheat-sheet/)
 
