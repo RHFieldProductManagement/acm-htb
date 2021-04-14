@@ -156,7 +156,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Installation**
 
-You need enable the obersvability service to be able to do many of the non-search tasks. Go to [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments/observing-environments#enable-observability) and follow the steps before proceeding.
+You need enable the obersvability service to be able to do many of the non-search tasks. Go to [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments/observing-environments-intro#enable-observability) and follow the steps before proceeding.
 
 > **NOTE:** As a prerequisite to enabling obersvability you must first configure an object store to create a storage solution. Red Hat Advanced Cluster Management only supports cloud providers with stable object stores, such as Amazon S3 (or other S3 compatible object stores like Ceph), Google Cloud Storage, and Azure storage.
 
