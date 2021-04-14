@@ -26,7 +26,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Task**: In this task you’re going to be asked to deploy RHACM on an existing OpenShift cluster (must be at least OpenShift 4.3). RHACM is deployed as an operator, and therefore you’ll deploy the components using the OpenShift OperatorHub, just like any other operator.
 
-**Documentation**: [Installing instructions for Red Hat Advanced Cluster Management for Kubernetes](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html-single/install/index)
+**Documentation**: [Installing instructions for Red Hat Advanced Cluster Management for Kubernetes](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html-single/install/index)
 
 **Installation Video**: https://youtu.be/4keQWJoFl7A
 
@@ -126,9 +126,9 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Documentation**: 
 
-* [Security and RHACM (overview)](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/security/security)
+* [Security and RHACM (overview)](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/security/security)
 
-* [Manage Security policies](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/security/security#manage-security-policies)
+* [Manage Security policies](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/security/security#manage-security-policies)
 
 **Overview**: https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_applications/managing-applications
 
