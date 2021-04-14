@@ -24,7 +24,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 ## **Task One: Installation of RHACM**
 
-**Task**: In this task you’re going to be asked to deploy RHACM on an existing OpenShift cluster (must be at least OpenShift 4.3). RHACM is deployed as an operator, and therefore you’ll deploy the components using the OpenShift OperatorHub, just like any other operator.
+**Task**: In this task you’re going to be asked to deploy RHACM on an existing OpenShift cluster (must be at least OpenShift [4.5.2](https://access.redhat.com/articles/5799561)). RHACM is deployed as an operator, and therefore you’ll deploy the components using the OpenShift OperatorHub, just like any other operator.
 
 **Documentation**: [Installing instructions for Red Hat Advanced Cluster Management for Kubernetes](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html-single/install/index)
 
