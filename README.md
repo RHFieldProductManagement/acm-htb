@@ -148,9 +148,9 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Documentation**: 
 
-* [Oberving Environments (overview)](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments/observing-environments)
+* [Oberving Environments (overview)](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments)
 
-* [Web console overview and usage](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/web_console/web-console)
+* [Web console overview and usage](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/web_console)
 
 * A couple of steps about [Using Visual Web Terminal](https://github.com/bjoydeep/acm/blob/main/Explore.md#using-visual-web-terminal) 
 
