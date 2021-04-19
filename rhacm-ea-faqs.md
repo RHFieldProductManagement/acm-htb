@@ -22,6 +22,9 @@ The following a collection of common questions and answers related to the Red Ha
 
 * Question: Where can I find more details on integrating Gatekeeper with RHACM?
   - Answer: [Integrating Gatekeeper with Red Hat Advanced Cluster Management for Kubernetes](https://www.openshift.com/blog/integrating-gatekeeper-with-red-hat-advanced-cluster-management-for-kubernetes)
+* Question: Where can I find more details on the policy framework?
+  - Answer: [Governance Policy Framework](https://github.com/open-cluster-management/governance-policy-framework)
+  - Answer: [Policy Framework Video](https://youtu.be/13TOnhu4ex8)
 
 ## **Miscellaneous Questions**
 
