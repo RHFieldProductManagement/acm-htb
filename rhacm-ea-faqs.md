@@ -32,3 +32,8 @@ The following a collection of common questions and answers related to the Red Ha
 
 * Question: When can I expect to see RHACM curriculum in the Red Hat Learning Portal?
   - Answer: RHACM are tenatively scheduled to be in the Red Hat Learning Portal the second half of 2021. 
+
+## **RFE's & Bugzillas**
+
+* [RFE Enable Ansible as deployment method](https://issues.redhat.com/browse/ACM-713)
+* 
