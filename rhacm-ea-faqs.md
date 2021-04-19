@@ -15,6 +15,9 @@ The following a collection of common questions and answers related to the Red Ha
 
 ## **Application Lifecycle Questions**
 
+* Question: How can I use Submariner to connect two managed RHACM clusters together?
+  - Answer: [Connecting managed clusters with Submariner in Red Hat Advanced Cluster Management for Kubernetes](https://www.openshift.com/blog/connecting-managed-clusters-with-submariner-in-red-hat-advanced-cluster-management-for-kubernetes)
+
 ## **Governance, Risk & Compliance Questions**
 
 * Question: Where can I find more details on integrating Gatekeeper with RHACM?
