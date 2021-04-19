@@ -17,6 +17,9 @@ The following a collection of common questions and answers related to the Red Ha
 
 ## **Governance, Risk & Compliance Questions**
 
+* Question: Where can I find more details on integrating Gatekeeper with RHACM?
+  - Answer: [Integrating Gatekeeper with Red Hat Advanced Cluster Management for Kubernetes](https://www.openshift.com/blog/integrating-gatekeeper-with-red-hat-advanced-cluster-management-for-kubernetes)
+
 ## **Miscellaneous Questions**
 
 * Question: When can I expect to see RHACM curriculum in the Red Hat Learning Portal?
