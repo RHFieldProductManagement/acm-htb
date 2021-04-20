@@ -36,4 +36,4 @@ The following a collection of common questions and answers related to the Red Ha
 ## **RFE's & Bugzillas**
 
 * [RFE Enable Ansible as deployment method](https://issues.redhat.com/browse/ACM-713)
-* 
+* [BZ Policy Gitops appears to be missing from documentation](https://bugzilla.redhat.com/show_bug.cgi?id=1942124)
