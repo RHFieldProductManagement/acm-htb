@@ -170,7 +170,7 @@ You need enable the obersvability service to be able to do many of the non-searc
 
 **Task**: Review the new out of the box multi cluster health monitoring dashboards. Create custom queries using PromQL (Prometheus Query Language).
 
-Remember to enable Observability as per [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.1/html/observing_environments/observing-environments#enable-observability)
+Remember to enable Observability as per [Enable observability service](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/observing_environments/observing-environments#enable-observability)
 
 **Documentation**: 
 
