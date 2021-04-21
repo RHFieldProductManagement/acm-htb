@@ -39,6 +39,6 @@ The following a collection of common questions and answers related to the Red Ha
 
 * [RFE Enable Ansible as deployment method](https://issues.redhat.com/browse/ACM-713)
 * [RFE Enable Ansible as cluster upgrade lifecycle method](https://issues.redhat.com/browse/ACM-735)
-* [AppSub Resilience from channel [git, helm, objectstore]](https://issues.redhat.com/browse/ACM-721)
-
+* [RFE AppSub Resilience from channel [git, helm, objectstore]](https://issues.redhat.com/browse/ACM-721)
+* [RFE Provide a "templatized" way to provide the value of the secret or config map](https://issues.redhat.com/browse/ACM-240)
 * [BZ Policy Gitops appears to be missing from documentation](https://bugzilla.redhat.com/show_bug.cgi?id=1942124)
