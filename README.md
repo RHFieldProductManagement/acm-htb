@@ -84,7 +84,7 @@ For each of the tasks below, please report your suggestions, feedback, and any b
 
 **Documentation**: [Manage applications](https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.2/html/manage_applications/index)
 
-**Sample Application Yaml**: [Sample application code](https://github.com/open-cluster-management/deploy/blob/master/demo/app/devapp/devapp.yaml) 
+**Sample Application Yaml**: [Sample application code](https://github.com/open-cluster-management/application-samples) 
 
 **Success Criteria**: Success of this task is based on the ability to create an application action and verify the app shows in the table. Further we should be able to validate that the channel was created and shows up in the pipeline.
 
