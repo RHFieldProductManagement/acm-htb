@@ -19,6 +19,9 @@ The following a collection of common questions and answers related to the Red Ha
 
 * Question: How can I use Submariner to connect two managed RHACM clusters together?
   - Answer: [Connecting managed clusters with Submariner in Red Hat Advanced Cluster Management for Kubernetes](https://www.openshift.com/blog/connecting-managed-clusters-with-submariner-in-red-hat-advanced-cluster-management-for-kubernetes)
+* Question: When creating subscriptions to be delivered to managed clusters what namespace should they reside in on the hub cluster?
+  - Answer: The answer really depends on how the customers want to organize things. By default, when a hub subscription deploys subscribed applications to      target clusters, the applications are deployed to that subscription namespace. Unless of course those app yamls specifically define its namespace.
+This behaviour can be configure but if you go by the default behaviour, it would imply the subscription lives in the same namespace as the namespace scope resources it deploys and manage.In this setup, the hub will have a namespace that matches the spoke cluster namespace both with their own subscription (hub vs standalone). This is easy to mentally visualize.But if there are a lot of apps that will live in their own namespaces then the hub will also have tons of namespaces so the answer really depends on how the customer want to set it up.
 
 ## **Governance, Risk & Compliance Questions**
 
