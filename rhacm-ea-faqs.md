@@ -29,6 +29,8 @@ The following a collection of common questions and answers related to the Red Ha
   - Answer: [Policy Framework Video](https://youtu.be/13TOnhu4ex8)
 * Question: How can I manage configuration via policy based governance?
   - Answer: [Implement Policy-based Governance Using Configuration Management of Red Hat Advanced Cluster Management for Kubernetes](https://www.openshift.com/blog/implement-policy-based-governance-using-configuration-management-of-red-hat-advanced-cluster-management-for-kubernetes)
+* Question: Does deleting a policy remove the changes a policy applied to the managed cluster?
+  - Answer: [Revert Policy Applied Changes to Managed Cluster](https://access.redhat.com/solutions/6005481)
 
 ## **Miscellaneous Questions**
 
