@@ -89,11 +89,11 @@ $ export CUSTOM_REGISTRY_REPO="quay.io:443/acm-d"
 $ export DOCKER_CONFIG=`cat ~/deploy/prereqs/pull-secret.yaml |grep dockerconfigjson:|cut -d: -f2|tr -d '[:space:]'`
 $ export QUAY_TOKEN=$(echo $DOCKER_CONFIG | base64 -d | sed "s/quay\.io/quay\.io:443/g" | base64 -w 0)
 ~~~
-21) Run the deploy process to install prerelease RHACM:
+22) Run the deploy process to install prerelease RHACM:
 ~~~bash
 $ cd ~/deploy
 $ ./start.sh --watch
 ~~~
-22) Once the start.sh script completes the RHACM components should be installed and ready to use.
+23) Once the start.sh script completes the RHACM components should be installed and ready to use.
 
-23) If RHACM should be uninstalled just run the ./uninstall.sh script in ~/deploy.
+24) If RHACM should be uninstalled just run the ./uninstall.sh script in ~/deploy.
