@@ -67,7 +67,7 @@ $ echo $PRERELEASE_PULL | base64 -d | sed "s/quay\.io/quay\.io:443/g" | tail -n 
 ~~~
 17) Merge prerelease-secret.json with existing cluster-pull-secret.json
 ~~~bash
-$ cat ~/cluster-pull-secret.json | jq ".auths += {`cat ~/prerelease-secret.json`}" > merged-pull-secret.json
+$ cat ~/cluster-pull-secret.json | jq ".auths += {`cat ~/prerelease-secret.json`}" > ~/merged-pull-secret.json
 ~~~
 18) Patch cluster with new merged-pull-secret.json
 ~~~bash
