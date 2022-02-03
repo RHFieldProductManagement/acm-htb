@@ -83,9 +83,9 @@ $ oc get nodes
 ~~~
 21) Deploy the MultiCluster Engine (MCE) by executing the commands below.  When asked for the snapshot version use the same one used in step 11:
 ~~~
-export DOWNSTREAM=true
-cd ~/deploy
-./multiclusterengine/start.sh
+$ export DOWNSTREAM=true
+$ cd ~/deploy
+$ ./multiclusterengine/start.sh
 ~~~
 22) Set a few environmental variables for the deploy:
 ~~~bash
