@@ -29,7 +29,7 @@ type: kubernetes.io/dockerconfigjson
 11) Update the snapshot file to a known good pre-release snapshot.  If not know ask the Red Hat Field Product Manager and they can provide that.  The updated file will look similar to the one below:
 ~~~bash
 $ cat ~/deploy/snapshot.ver 
-2.2.0-DOWNSTREAM-2021-01-28-15-20-59
+2.5.0-DOWNSTREAM-2022-02-03-02-39-53
 ~~~
 12) Create an ImageContentSourcePolicy and apply it to the cluster.  The contents of that policy should look like the one below:
 ~~~bash
