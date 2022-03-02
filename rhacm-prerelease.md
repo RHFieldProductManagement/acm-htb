@@ -16,7 +16,7 @@ The following document guides the customer through the process of getting access
 7. Download the username-secret.yaml file as we will need this for later steps.  
 8. Save this file to the host where the `oc` client and OpenShift cluster access will be. 
 
-==Do not proceed to the next steps until the username has been confirmed by Red Hat that it has been given access to the private registry.==
+**Note: Do not proceed to the next steps until the username has been confirmed by Red Hat that it has been given access to the private registry.**
 
 ## Depoying a RHACM Pre-release
 
