@@ -80,12 +80,6 @@ The following document guides the customer through the process of getting access
     $ oc get secret/pull-secret -n openshift-config -o json | jq '.data.".dockerconfigjson"' | tr -d '"' | base64 -d | python3 -m json.tool
     ~~~
 
-20. Wait for cluster node restarts due to change of pull-secret.  Validate all nodes are up:
-
-    ~~~bash
-    $ oc get nodes
-    ~~~
-
 21. *SKIP* Deploy the MultiCluster Engine (MCE) by executing the commands below.  When asked for the snapshot version use the same one used in step 11:
 
     ~~~
