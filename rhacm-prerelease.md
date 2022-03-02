@@ -120,8 +120,7 @@ The following document guides the customer through the process of getting access
 25. You can view the successful installation with the following command:
 
     ~~~bash
-    $ oc get sub -n open-cluster-management
-    
+    $ oc get sub -n open-cluster-management    
     NAME                        PACKAGE                       SOURCE                CHANNEL
 acm-operator-subscription   advanced-cluster-management   acm-custom-registry   release-2.5
     ~~~
@@ -129,8 +128,8 @@ acm-operator-subscription   advanced-cluster-management   acm-custom-registry   
 25. You can find the ACM UI by checking for its route:
 
     ~~~bash
-$ oc get routes | grep multicloud
-multicloud-console   multicloud-console.apps.cluster-kd7s7.kd7s7.sandbox1430.opentlc.com          management-ingress   https   reencrypt/Redirect   None
+    $ oc get routes | grep multicloud
+    multicloud-console   multicloud-console.apps.cluster-kd7s7.kd7s7.sandbox1430.opentlc.com          management-ingress   https   reencrypt/Redirect   None
     ~~~
 
 ## Uninstall RHACM Pre-release
