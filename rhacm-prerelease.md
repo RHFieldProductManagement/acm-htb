@@ -122,7 +122,7 @@ The following document guides the customer through the process of getting access
     ~~~bash
     $ oc get sub -n open-cluster-management
     NAME                        PACKAGE                       SOURCE                CHANNEL
-acm-operator-subscription   advanced-cluster-management   acm-custom-registry   release-2.5
+    acm-operator-subscription   advanced-cluster-management   acm-custom-registry   release-2.5
     ~~~
 
 25. You can find the ACM UI by checking for its route:
