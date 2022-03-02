@@ -8,13 +8,15 @@ The following document guides the customer through the process of getting access
 
 1. Go to [Quay.io](https://quay.io) and register for an account.
 
-2. Once a username has been created provide that username to the Red Hat Field Product Manager who will get it associated to the private pre-release registries.
-3. In the Quay.io interface in the upper right hand corner click on the username and a drop down with *Account Settings* will appear.  Go into *Account Settings*.
+2. Once a username has been created provide that username to your Red Hat Field Product Manager who will get it associated to the private pre-release registries.
+3. In the Quay.io interface in the upper right hand corner click on your username and a drop down with *Account Settings* will appear.  Go into *Account Settings*.
 4. On the left hand side of *Account Settings* select the *Gears* icon for user settings.
-5. Near the top left of the settings page will be *CLI Password*.  Select this and type in the password for the username.
-6. This will generate a *Username Credentials* box that will have various credentials for the user.  Select the *Kubernetes Secret* on the left hand side list.
-7. Download the username-secret.yaml from the box as we will need this for later steps.   Move this file to host where the oc client and OpenShift cluster access will be. 
-8. Do not proceed with the next steps until the username has been confirmed by Red Hat that it has been given access to the private registry.
+5. Near the top left of the settings page is a *CLI Password* label followed by a clickable *Generate Encrypted Password* link.  Click this link and type in your quay.io password.
+6. This will generate a *Credentials for YourUsername* box that will have various credentials for the user.  Select the *Kubernetes Secret* on the left hand side list.
+7. Download the username-secret.yaml file as we will need this for later steps.  
+8. Save this file to the host where the `oc` client and OpenShift cluster access will be. 
+
+Do not proceed to the next steps until the username has been confirmed by Red Hat that it has been given access to the private registry.
 
 ## Depoying a RHACM Pre-release
 
