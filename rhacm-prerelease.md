@@ -18,7 +18,7 @@ The following document guides the customer through the process of getting access
 
 ## Depoying a RHACM Pre-release
 
-1. Ensure you have a running OpenShift cluster **without** ACM installed. You'll need access to the `oc` CLI. You may need to make a softlink for kubectl to the oc client if kubectl does not exist on host.
+1. Ensure you have a running OpenShift cluster **without** ACM installed. You'll need access to the `oc` CLI. You may need to make a softlink for `kubectl` to the `oc` client if kubectl does not exist on host.
 
     ~~~bash
     $ sudo ln -s /usr/local/bin/oc /usr/local/bin/kubectl
@@ -31,7 +31,7 @@ The following document guides the customer through the process of getting access
     $ git clone https://github.com/stolostron/deploy.git
     ~~~
     
-4. Create a pull-secret.yaml file from the contents of username-secret.yaml file obtained from Quay.io.  The metadata name should be updated to: multiclusterhub-operator-pull-secret.  Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
+4. Create a `pull-secret.yaml` file from the contents of `username-secret.yaml` file obtained from Quay.io.  The metadata name should be updated to: `multiclusterhub-operator-pull-secret`.  Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
 
     ~~~bash
     $ cat ~/deploy/prereqs/pull-secret.yaml 
