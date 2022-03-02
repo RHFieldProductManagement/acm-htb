@@ -31,6 +31,7 @@ The following document guides the customer through the process of getting access
       .dockerconfigjson: <PULL-SECRET REDACTED>
     type: kubernetes.io/dockerconfigjson
     ~~~
+
 11. Update the snapshot file to a known good pre-release snapshot.  If not know ask the Red Hat Field Product Manager and they can provide that.  The updated file will look similar to the one below:
 
     ~~~bash
@@ -42,7 +43,7 @@ The following document guides the customer through the process of getting access
     ~~~bash
     $ oc apply -f  ~/deploy/addons/downstream/image-content-source-policy.yaml
     ~~~
-13. Wait for nodes to reboot as the ImageContentSourcePolicy is applied before proceeding.
+
 14. Next pull the current pull secret from the cluster and dump into file:
 
     ~~~bash
