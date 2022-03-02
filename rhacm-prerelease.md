@@ -4,6 +4,8 @@ Customers that are part of the RHACM Early Access program can obtain pre-release
 
 The following document guides the customer through the process of getting access and deploying those pre-release versions into an OpenShift cluster.
 
+## Accessing RHACM Pre-release versions
+
 1. Go to [Quay.io](https://quay.io) and register for an account.
 2. Once a username has been created provide that username to the Red Hat Field Product Manager who will get it associated to the private pre-release registries.
 3. In the Quay.io interface in the upper right hand corner click on the username and a drop down with *Account Settings* will appear.  Go into *Account Settings*.
@@ -12,13 +14,21 @@ The following document guides the customer through the process of getting access
 6. This will generate a *Username Credentials* box that will have various credentials for the user.  Select the *Kubernetes Secret* on the left hand side list.
 7. Download the username-secret.yaml from the box as we will need this for later steps.   Move this file to host where the oc client and OpenShift cluster access will be. 
 8. Do not proceed with the next steps until the username has been confirmed by Red Hat that it has been given access to the private registry.
-9. Obtain the upstream ACM deploy repository at Github on a machine that also has a working oc client and kubeconfig with access to the OpenShift cluster that will become the hub.  Also make a softlink for kubectl to the oc client if kubectl does not exist on host.
+
+## Depoying a RHACM Pre-release
+
+9. Ensure you have a running OpenShift cluster **without** ACM installed. You'll need access to the `oc` CLI. You may need to make a softlink for kubectl to the oc client if kubectl does not exist on host.
 
     ~~~bash
-    sudo ln -s /usr/local/bin/oc /usr/local/bin/kubectl
-    git clone https://github.com/stolostron/deploy.git
+    $ sudo ln -s /usr/local/bin/oc /usr/local/bin/kubectl
     ~~~
 
+10. Ensure the machine you're working on has `sed`, `jq`, and `yq` installed. You may need to download `yq` from [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq) depending on your distro.
+11. Clone the upstream ACM deploy repository at Github on the machine that has the working oc client and kubeconfig with access to the OpenShift cluster.
+  
+    ~~~bash
+    $ git clone https://github.com/stolostron/deploy.git
+    ~~~
 10. Create a pull-secret.yaml file from the contents of username-secret.yaml file obtained from Quay.io.  The metadata name should be updated to: multiclusterhub-operator-pull-secret.  Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
 
     ~~~bash
@@ -32,7 +42,7 @@ The following document guides the customer through the process of getting access
     type: kubernetes.io/dockerconfigjson
     ~~~
 
-11. Update the snapshot file to a known good pre-release snapshot.  If not know ask the Red Hat Field Product Manager and they can provide that.  The updated file will look similar to the one below:
+11. Update the `snapshot.ver` to a known good pre-release snapshot (this value will be provided to you by a Field PM). The updated file will look similar to the one below:
 
     ~~~bash
     $ cat ~/deploy/snapshot.ver 
