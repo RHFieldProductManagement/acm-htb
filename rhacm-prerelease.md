@@ -129,7 +129,8 @@ acm-operator-subscription   advanced-cluster-management   acm-custom-registry   
 25. You can find the ACM UI by checking for its route:
 
     ~~~bash
-    $ oc get routes | grep multicloud multicloud-console   multicloud console.apps.clusterexample.com          management-ingress   https   reencrypt/Redirect  None
+$ oc get routes | grep multicloud
+multicloud-console   multicloud-console.apps.cluster-kd7s7.kd7s7.sandbox1430.opentlc.com          management-ingress   https   reencrypt/Redirect   None
     ~~~
 
 ## Uninstall RHACM Pre-release
