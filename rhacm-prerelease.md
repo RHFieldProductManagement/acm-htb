@@ -7,6 +7,7 @@ The following document guides the customer through the process of getting access
 ## Accessing RHACM Pre-release versions
 
 1. Go to [Quay.io](https://quay.io) and register for an account.
+
 2. Once a username has been created provide that username to the Red Hat Field Product Manager who will get it associated to the private pre-release registries.
 3. In the Quay.io interface in the upper right hand corner click on the username and a drop down with *Account Settings* will appear.  Go into *Account Settings*.
 4. On the left hand side of *Account Settings* select the *Gears* icon for user settings.
@@ -115,6 +116,23 @@ The following document guides the customer through the process of getting access
     $ ./start.sh --watch
     ~~~
     
-24. Once the start.sh script completes the RHACM components should be installed and ready to use.
+24. Once the `start.sh` script completes the RHACM components are installed and ready to use.
+25. You can view the successful installation with the following command:
 
-25. If RHACM should be uninstalled just run the ./uninstall.sh script in ~/deploy.
+    ~~~bash
+    $ oc get sub -n open-cluster-management
+    
+    NAME                        PACKAGE                       SOURCE                CHANNEL
+acm-operator-subscription   advanced-cluster-management   acm-custom-registry   release-2.5
+    ~~~
+
+25. You can find the ACM UI by checking for its route:
+
+    ~~~bash
+    $ oc get routes | grep multicloud
+multicloud-console   multicloud-console.apps.clusterexample.com          management-ingress   https   reencrypt/Redirect   None
+    ~~~
+
+## Uninstall RHACM Pre-release
+    
+If RHACM needs to be uninstalled just run the `./uninstall.sh` script in `deploy` directory of the git checkout.
