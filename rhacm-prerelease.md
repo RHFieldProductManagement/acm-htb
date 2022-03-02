@@ -100,7 +100,7 @@ The following document guides the customer through the process of getting access
     $ export COMPOSITE_BUNDLE=true
     $ export CUSTOM_REGISTRY_REPO="quay.io:443/acm-d"
     $ export DOCKER_CONFIG=`cat ~/deploy/prereqs/pull-secret.yaml |grep dockerconfigjson:|cut -d: -f2|tr -d '[:space:]'`
-$ export QUAY_TOKEN=$(echo $DOCKER_CONFIG | base64 -d | sed "s/quay\.io/quay\.io:443/g" | base64 -w 0)
+    $ export QUAY_TOKEN=$(echo $DOCKER_CONFIG | base64 -d | sed "s/quay\.io/quay\.io:443/g" | base64 -w 0)
     ~~~
     
 23. Run the deploy process to install prerelease RHACM:
