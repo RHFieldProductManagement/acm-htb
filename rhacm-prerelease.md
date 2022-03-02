@@ -132,7 +132,7 @@ The following document guides the customer through the process of getting access
     
     **Confirm the TAG is correct** and hit ENTER to continue.
     
-    **Note:** The deployment process is run in DEBUG mode so you will see a lot of errors and strange conditions displayed. Allow the process to finish. Any issues save the logs (copy and paste from the screen if needed) and share with your Field PM for help!
+    **Note:** The deployment process is run in DEBUG mode so you will see a lot of errors and strange conditions displayed. Allow the process to finish. If you hit any issues save the logs (copy and paste from the screen if needed) and share with your Field PM for help!
     
 15. Once the `start.sh` deploy script completes the RHACM components are installed and ready to use.
 16. You can view the successful installation with the following command:
