@@ -26,14 +26,27 @@ The following document guides the customer through the process of getting access
     $ sudo ln -s /usr/local/bin/oc /usr/local/bin/kubectl
     ~~~
     
-2. Ensure the machine you're working on has `sed`, `jq`, and `yq` installed. You may need to download `yq` from [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq) depending on your distro.
+2. Ensure the machine you're working on has `sed`, `jq`, and `yq` installed and in your `PATH`. 
+
+    You may need to download `yq` from [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq) depending on your distro. Versions may change, but a **non-production** way to do this is:
+    
+    ~~~bash
+    $ wget https://github.com/mikefarah/yq/releases/download/v4.21.1/yq_linux_amd64
+    $ chmod +x ./yq_linux_amd64
+    $ sudo mv ./yq_linux_amd64 /usr/bin/yq
+    ~~~
+
 3. Clone the upstream ACM deploy repository at Github on the machine that has the working oc client and kubeconfig with access to the OpenShift cluster.
   
     ~~~bash
     $ git clone https://github.com/stolostron/deploy.git
     ~~~
     
-4. Create a `pull-secret.yaml` file from the contents of `username-secret.yaml` file obtained from Quay.io.  The metadata name should be updated to: `multiclusterhub-operator-pull-secret`.  Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
+4. Create a `pull-secret.yaml` file from the contents of `username-secret.yaml` file obtained from Quay.io.  
+
+    The metadata `name:` should be changed to: `multiclusterhub-operator-pull-secret`.  
+    
+    Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
 
     ~~~bash
     $ cat ~/deploy/prereqs/pull-secret.yaml 
@@ -50,7 +63,7 @@ The following document guides the customer through the process of getting access
 
     ~~~bash
     $ cat ~/deploy/snapshot.ver 
-    2.5.0-DOWNSTREAM-2022-02-03-02-39-53
+    2.5.0-DOWNSTREAM-2022-03-01-06-19-12
     ~~~
 6. Apply the following ImageContentSourcePolicy to the cluster:
 
@@ -111,7 +124,17 @@ The following document guides the customer through the process of getting access
     $ ./start.sh --watch
     ~~~
     
-15. Once the `start.sh` script completes the RHACM components are installed and ready to use.
+    **Note:** Before the deployment starts you'll need to confirm the SNAPSHOT TAG. The script will pause at dialog like the following:
+    
+    ~~~bash
+    Enter SNAPSHOT TAG: (Press ENTER for default: 2.5.0-DOWNSTREAM-2022-03-01-06-19-12)
+    ~~~
+    
+    **Confirm the TAG is correct** and hit ENTER to continue.
+    
+    **Note:** The deployment process is run in DEBUG mode so you will see a lot of errors and strange conditions displayed. Allow the process to finish. Any issues save the logs (copy and paste from the screen if needed) and share with your Field PM for help!
+    
+15. Once the `start.sh` deploy script completes the RHACM components are installed and ready to use.
 16. You can view the successful installation with the following command:
 
     ~~~bash
@@ -120,10 +143,10 @@ The following document guides the customer through the process of getting access
     acm-operator-subscription   advanced-cluster-management   acm-custom-registry   release-2.5
     ~~~
 
-17. You can find the ACM UI by checking for its route:
+17. You can find the ACM UI (the "multicloud console") by checking for its route:
 
     ~~~bash
-    $ oc get routes | grep multicloud
+    $ oc get routes -A | grep multicloud
     multicloud-console   multicloud-console.apps.cluster1-example.com          management-ingress   https   reencrypt/Redirect   None
     ~~~
 
