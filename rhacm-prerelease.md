@@ -64,7 +64,7 @@ $ oc get secret/pull-secret -n openshift-config -o json | jq '.data.".dockerconf
 ~~~bash
 $ oc get nodes
 ~~~
-21) Deploy the MultiCluster Engine (MCE) by executing the commands below.  When asked for the snapshot version use the same one used in step 11:
+21) *SKIP* Deploy the MultiCluster Engine (MCE) by executing the commands below.  When asked for the snapshot version use the same one used in step 11:
 ~~~
 $ export DOWNSTREAM=true
 $ cd ~/deploy
