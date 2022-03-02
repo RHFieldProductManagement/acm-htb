@@ -92,15 +92,7 @@ The following document guides the customer through the process of getting access
     $ oc get secret/pull-secret -n openshift-config -o json | jq '.data.".dockerconfigjson"' | tr -d '"' | base64 -d | python3 -m json.tool
     ~~~
 
-13. *SKIP* Deploy the MultiCluster Engine (MCE) by executing the commands below.  When asked for the snapshot version use the same one used in step 11:
-
-    ~~~
-    $ export DOWNSTREAM=true
-    $ cd ~/deploy
-    $ ./multiclusterengine/start.sh
-    ~~~
-
-14. Set a few environmental variables for the deploy:
+13. Set a few environmental variables for the deploy:
 
     ~~~bash
     $ export DEBUG=true
@@ -110,15 +102,15 @@ The following document guides the customer through the process of getting access
     $ export QUAY_TOKEN=$(echo $DOCKER_CONFIG | base64 -d | sed "s/quay\.io/quay\.io:443/g" | base64 -w 0)
     ~~~
     
-15. Run the deploy process to install prerelease RHACM:
+14. Run the deploy process to install prerelease RHACM:
 
     ~~~bash
     $ cd ~/deploy
     $ ./start.sh --watch
     ~~~
     
-16. Once the `start.sh` script completes the RHACM components are installed and ready to use.
-17. You can view the successful installation with the following command:
+15. Once the `start.sh` script completes the RHACM components are installed and ready to use.
+16. You can view the successful installation with the following command:
 
     ~~~bash
     $ oc get sub -n open-cluster-management
@@ -126,7 +118,7 @@ The following document guides the customer through the process of getting access
     acm-operator-subscription   advanced-cluster-management   acm-custom-registry   release-2.5
     ~~~
 
-18. You can find the ACM UI by checking for its route:
+17. You can find the ACM UI by checking for its route:
 
     ~~~bash
     $ oc get routes | grep multicloud
