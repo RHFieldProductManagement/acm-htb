@@ -44,7 +44,7 @@ The following document guides the customer through the process of getting access
     
 4. Create a `pull-secret.yaml` file from the contents of `username-secret.yaml` file obtained from Quay.io.  
 
-    The metadata `name:` should be changed to: `multiclusterhub-operator-pull-secret`.  
+    The `metadata:` `name:` field should be changed to: `multiclusterhub-operator-pull-secret`.  
     
     Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
 
