@@ -18,19 +18,20 @@ The following document guides the customer through the process of getting access
 
 ## Depoying a RHACM Pre-release
 
-9. Ensure you have a running OpenShift cluster **without** ACM installed. You'll need access to the `oc` CLI. You may need to make a softlink for kubectl to the oc client if kubectl does not exist on host.
+1. Ensure you have a running OpenShift cluster **without** ACM installed. You'll need access to the `oc` CLI. You may need to make a softlink for kubectl to the oc client if kubectl does not exist on host.
 
     ~~~bash
     $ sudo ln -s /usr/local/bin/oc /usr/local/bin/kubectl
     ~~~
-
-10. Ensure the machine you're working on has `sed`, `jq`, and `yq` installed. You may need to download `yq` from [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq) depending on your distro.
-11. Clone the upstream ACM deploy repository at Github on the machine that has the working oc client and kubeconfig with access to the OpenShift cluster.
+    
+2. Ensure the machine you're working on has `sed`, `jq`, and `yq` installed. You may need to download `yq` from [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq) depending on your distro.
+3. Clone the upstream ACM deploy repository at Github on the machine that has the working oc client and kubeconfig with access to the OpenShift cluster.
   
     ~~~bash
     $ git clone https://github.com/stolostron/deploy.git
     ~~~
-10. Create a pull-secret.yaml file from the contents of username-secret.yaml file obtained from Quay.io.  The metadata name should be updated to: multiclusterhub-operator-pull-secret.  Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
+    
+4. Create a pull-secret.yaml file from the contents of username-secret.yaml file obtained from Quay.io.  The metadata name should be updated to: multiclusterhub-operator-pull-secret.  Place the file inside the deploy/prereqs directory.  The finished file and location should look similar to the below but note the pull-secret itself has been redacted in this example:
 
     ~~~bash
     $ cat ~/deploy/prereqs/pull-secret.yaml 
@@ -43,55 +44,55 @@ The following document guides the customer through the process of getting access
     type: kubernetes.io/dockerconfigjson
     ~~~
 
-11. Update the `snapshot.ver` to a known good pre-release snapshot (this value will be provided to you by a Field PM). The updated file will look similar to the one below:
+5. Update the `snapshot.ver` to a known good pre-release snapshot (this value will be provided to you by a Field PM). The updated file will look similar to the one below:
 
     ~~~bash
     $ cat ~/deploy/snapshot.ver 
     2.5.0-DOWNSTREAM-2022-02-03-02-39-53
     ~~~
-12. Apply the following ImageContentSourcePolicy to the cluster:
+6. Apply the following ImageContentSourcePolicy to the cluster:
 
     ~~~bash
     $ oc apply -f  ~/deploy/addons/downstream/image-content-source-policy.yaml
     ~~~
 
-14. Next pull the current pull secret from the cluster and dump into file:
+7. Next pull the current pull secret from the cluster and dump into file:
 
     ~~~bash
     $ oc get secret/pull-secret -n openshift-config -o json | jq '.data.".dockerconfigjson"' | tr -d '"' | base64 -d > ~/cluster-pull-secret.json
     ~~~
     
-15. Extract the pre-release pull secret from the pull-secret.yaml created back in step 10:
+8. Extract the pre-release pull secret from the pull-secret.yaml created back in step 10:
 
     ~~~bash
     $ export PRERELEASE_PULL=$(grep -o '.dockerconfigjson:.*' ~/deploy/prereqs/pull-secret.yaml | cut -f2- -d: | sed 's/^[ \t]*//;s/[ \t]*$//')
     ~~~
 
-16. Convert quay.io to quay.io:443 and dump out to prerelease-secret.json:
+9. Convert quay.io to quay.io:443 and dump out to prerelease-secret.json:
 
     ~~~bash
     $ echo $PRERELEASE_PULL | base64 -d | sed "s/quay\.io/quay\.io:443/g" | tail -n +3 | head -n -2 > ~/prerelease-secret.json
     ~~~
     
-17. Merge prerelease-secret.json with existing cluster-pull-secret.json
+10. Merge prerelease-secret.json with existing cluster-pull-secret.json
 
     ~~~bash
     $ cat ~/cluster-pull-secret.json | jq ".auths += {`cat ~/prerelease-secret.json`}" > ~/merged-pull-secret.json
     ~~~
 
-18. Patch cluster with new merged-pull-secret.json
+11. Patch cluster with new merged-pull-secret.json
 
     ~~~bash
     $ oc patch secret/pull-secret -n openshift-config --type merge --patch '{"data":{".dockerconfigjson":"'$(cat ~/merged-pull-secret.json | tr -d '[:space:]' | base64 -w 0)'"}}'
     ~~~
 
-19. Validate pull-secret from cluster looks correct:
+12. Validate pull-secret from cluster looks correct:
 
     ~~~bash
     $ oc get secret/pull-secret -n openshift-config -o json | jq '.data.".dockerconfigjson"' | tr -d '"' | base64 -d | python3 -m json.tool
     ~~~
 
-21. *SKIP* Deploy the MultiCluster Engine (MCE) by executing the commands below.  When asked for the snapshot version use the same one used in step 11:
+13. *SKIP* Deploy the MultiCluster Engine (MCE) by executing the commands below.  When asked for the snapshot version use the same one used in step 11:
 
     ~~~
     $ export DOWNSTREAM=true
@@ -99,7 +100,7 @@ The following document guides the customer through the process of getting access
     $ ./multiclusterengine/start.sh
     ~~~
 
-22. Set a few environmental variables for the deploy:
+14. Set a few environmental variables for the deploy:
 
     ~~~bash
     $ export DEBUG=true
@@ -109,15 +110,15 @@ The following document guides the customer through the process of getting access
     $ export QUAY_TOKEN=$(echo $DOCKER_CONFIG | base64 -d | sed "s/quay\.io/quay\.io:443/g" | base64 -w 0)
     ~~~
     
-23. Run the deploy process to install prerelease RHACM:
+15. Run the deploy process to install prerelease RHACM:
 
     ~~~bash
     $ cd ~/deploy
     $ ./start.sh --watch
     ~~~
     
-24. Once the `start.sh` script completes the RHACM components are installed and ready to use.
-25. You can view the successful installation with the following command:
+16. Once the `start.sh` script completes the RHACM components are installed and ready to use.
+17. You can view the successful installation with the following command:
 
     ~~~bash
     $ oc get sub -n open-cluster-management
@@ -125,7 +126,7 @@ The following document guides the customer through the process of getting access
     acm-operator-subscription   advanced-cluster-management   acm-custom-registry   release-2.5
     ~~~
 
-25. You can find the ACM UI by checking for its route:
+18. You can find the ACM UI by checking for its route:
 
     ~~~bash
     $ oc get routes | grep multicloud
