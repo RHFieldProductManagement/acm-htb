@@ -6,7 +6,7 @@ The following document guides the customer through the process of getting access
 
 
 >>:warning: **IMPORTANT**  
->>All pre-release work should be completed in a non-production environment! Pre-release deployments are not supported by standard Red Hat support channels and not covered under any existing subscription conditions. Additionally, pre-release installations **cannot be upgraded to GA versions**. Moving from a pre-release version to GA will require a complete reinstall .
+>>All pre-release work should be completed in a non-production environment! Pre-release deployments are not supported by standard Red Hat support channels and not covered under any existing subscription conditions. Additionally, pre-release installations **cannot be upgraded to GA versions**. Moving from a pre-release version to GA will require a complete reinstall.
 
 ## Accessing RHACM Pre-release versions
 
