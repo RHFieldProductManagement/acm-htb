@@ -4,9 +4,10 @@ Customers that are part of the RHACM Early Access program can obtain pre-release
 
 The following document guides the customer through the process of getting access and deploying those pre-release versions into an OpenShift cluster.
 
-:exclamation: :warning: **IMPORTANT** :warning: :exclamation: 
 
-All pre-release work should be completed in a non-production environment! Pre-release deployments are not supported by standard Red Hat support channels and not covered under any existing subscription conditions. Additionally, pre-release installations **cannot be upgraded to GA versions**. Moving from a pre-release version to GA will require a complete reinstall from scratch.
+>>:exclamation: :warning: **IMPORTANT** :warning: :exclamation: 
+
+>>All pre-release work should be completed in a non-production environment! Pre-release deployments are not supported by standard Red Hat support channels and not covered under any existing subscription conditions. Additionally, pre-release installations **cannot be upgraded to GA versions**. Moving from a pre-release version to GA will require a complete reinstall .
 
 ## Accessing RHACM Pre-release versions
 
