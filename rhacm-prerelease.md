@@ -90,7 +90,13 @@ The following document guides the customer through the process of getting access
 9. Convert quay.io to quay.io:443 and dump out to prerelease-secret.json:
 
     ~~~bash
-    $ echo $PRERELEASE_PULL | base64 -d | sed "s/quay\.io/quay\.io:443/g" | tail -n +3 | head -n 2 > ~/prerelease-secret.json
+    $ echo $PRERELEASE_PULL | base64 -d | sed "s/quay\.io/quay\.io:443/g" | tail -n +3 | head -n -2 > ~/prerelease-secret.json
+    ~~~
+
+    NOTE: If you have an issue with the `head` command (using zsh?) than use `tail` instead as such:
+   
+    ~~~bash
+    echo $PRERELEASE_PULL | base64 -d | sed "s/quay\.io/quay\.io:443/g" | tail -n +3 | tail -r | tail -n +2 | tail -r > ~/prerelease-secret.json
     ~~~
     
 10. Merge prerelease-secret.json with existing cluster-pull-secret.json
