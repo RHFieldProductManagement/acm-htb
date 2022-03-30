@@ -93,7 +93,7 @@ The following document guides the customer through the process of getting access
     $ echo $PRERELEASE_PULL | base64 -d | sed "s/quay\.io/quay\.io:443/g" | tail -n +3 | head -n -2 > ~/prerelease-secret.json
     ~~~
 
-    NOTE: If you have an issue with the `head` command (using zsh?) than use `tail` instead as such:
+    >NOTE: If you have an issue with the `head` command (seeing error: `head: illegal line count -- -2`) then you can use `tail` instead as such:
    
     ~~~bash
     echo $PRERELEASE_PULL | base64 -d | sed "s/quay\.io/quay\.io:443/g" | tail -n +3 | tail -r | tail -n +2 | tail -r > ~/prerelease-secret.json
@@ -106,6 +106,8 @@ The following document guides the customer through the process of getting access
     ~~~
 
 11. Patch cluster with new merged-pull-secret.json
+
+  > NOTE: if using a Mac for your deployment environment you may get errors from the `base64` command usage below. For Mac's only, you don't need to include `-w 0` as this is the default behaviour on a Mac. **Keep this in mind for future steps.**
 
     ~~~bash
     $ oc patch secret/pull-secret -n openshift-config --type merge --patch '{"data":{".dockerconfigjson":"'$(cat ~/merged-pull-secret.json | tr -d '[:space:]' | base64 -w 0)'"}}'
