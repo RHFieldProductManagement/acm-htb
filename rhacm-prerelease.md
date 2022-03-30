@@ -107,7 +107,7 @@ The following document guides the customer through the process of getting access
 
 11. Patch cluster with new merged-pull-secret.json
 
-  > NOTE: if using a Mac for your deployment environment you may get errors from the `base64` command usage below. For Mac's only, you don't need to include `-w 0` as this is the default behaviour on a Mac. **Keep this in mind for future steps.**
+    > NOTE: if using a Mac for your deployment environment you may get errors from the `base64` command usage below. For Mac's only, you don't need to include `-w 0` as this is the default behaviour on a Mac. **Keep this in mind for future steps.**
 
     ~~~bash
     $ oc patch secret/pull-secret -n openshift-config --type merge --patch '{"data":{".dockerconfigjson":"'$(cat ~/merged-pull-secret.json | tr -d '[:space:]' | base64 -w 0)'"}}'
